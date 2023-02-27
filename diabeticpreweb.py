@@ -32,7 +32,7 @@ st.markdown(Data_set, unsafe_allow_html=True)
 
 Data_set = '<p style="font-family:Lucida Calligraphy; color:Cooper Black; font-size: 15px;">DATA SET</p>'
 st.markdown(Data_set, unsafe_allow_html=True)
-df=pd.read_csv("C:/Users/Jyothsna/Downloads/diabetes.csv")
+df=pd.read_csv("diabetes.csv")
 st.write(df)
 d = st.date_input(
     "When your checking",
@@ -98,7 +98,7 @@ if species_option == 'Heat_map':
 
 
 
-loaded_model=pickle.load(open("C:/Users/Jyothsna/OneDrive/Desktop/test/trained_mode.sav",'rb'))
+loaded_model=pickle.load(open("trained_mode.sav",'rb'))
 def diabetics_prediction(input_data):
     input_data_as_numpy_array=np.asarray(input_data)
     input_data_reshaped=input_data_as_numpy_array.reshape(1,-1)
